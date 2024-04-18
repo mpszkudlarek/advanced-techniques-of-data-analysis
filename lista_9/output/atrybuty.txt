@@ -1,0 +1,8 @@
+kwota kredytu: 0.0182
+wiek: 0.0113
+plec: 0.0125
+rodzaj zrodla dochodu: 0.0057
+miesieczny dochod netto: 0.0437
+ktore rolowanie: 0.0452
+okres w jakim pobieral dochod: 0.0231
+okres w jakim bedzie pobieral dochod: 0.0346
