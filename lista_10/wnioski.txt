@@ -1,0 +1,35 @@
+ZeroRule:
+Stała wydajność - konekwentne pokazywanie dokładności na poziomie około 86.15% niezależnie od liczby foldów i powtórzeń, przewiduje on zawsze dominującą klasę
+Brak zdolności dyskryminacyjnej - wskaźnik GMean i AUC są bardzo niskie i bliskie 0.5 - brak zdolności modelu do rozróżniania między klasami.
+
+JRip:
+Większa ilość powtórzeń walidacji krzyżowej - większa stabilność i tendencja do poprawy wskaźnika GMean
+Wyższe wartości AUC, JRip  - osiąga lepsze wartości niż ZeroRule, większa zdolność do rozróżniania między klasami.
+
+J48:
+Konsekwentnie dobre wyniki - wykazuje konsekwentnie dobre wyniki w dokładności, GMean i AUC w różnych konfiguracjach, co sugeruje - dobrze dopasowany klasyfikator do tego zadania
+Lepsze wyniki przy większej liczbie foldów: Wartości GMean i AUC wydają się nieco lepsze przy 10 foldach w porównaniu z 5 i 15, co sugeruje, że większa liczba foldów może poprawić wyniki.
+
+SMO:
+Stabilność dokładności - utrzymuje stałą dokładność, ale wskaźnik TPrate jest niski, co oznacza trudności z poprawnym klasyfikowaniem pozytywnych przypadków.
+Niska zdolność dyskryminacyjna - Podobnie jak ZeroRule, SMO ma niskie wartości GMean i AUC, co wskazuje na niską zdolność do dyskryminacji między klasami.
+
+MLP:
+Dobre wyniki w GMean i AUC -  osiąga dobre wyniki w GMean i AUC, które są stabilne przy różnych liczbie foldów i powtórzeń.
+Poprawa zwiększającą liczbę foldów - wartości GMean i AUC wydają się być nieco lepsze przy 10 i 15 foldach, lepsze wyniki przy większej liczbie danych.
+
+NaiveBayes:
+Najlepsze zdolności dyskryminacyjne -  wykazuje konsekwentnie najwyższe wartości AUC spośród wszystkich klasyfikatorów, co wskazuje na jego silną zdolność do różnicowania między klasami "dobry" i "zły klient".
+Stabilność wskaźników - sskaźniki GMean i AUC są stosunkowo stabilne przy różnych liczbie foldów i powtórzeń, co może wskazywać na dobre zdolności do generalizacji modelu.
+
+Wnioski końcowe
+Najlepsze zdolności dyskryminacyjne -  NaiveBayes wykazuje konsekwentnie najwyższe wartości AUC spośród wszystkich klasyfikatorów, 
+co wskazuje na jego silną zdolność do różnicowania między klasami "dobry" i "zły klient".
+
+Stabilność wskaźników: Wskaźniki GMean i AUC są stosunkowo stabilne przy różnych liczbie foldów i powtórzeń, poprawiają one co prawda wyniki, ale nie bardzo znacząco,
+sugerując, że model ma dobre właściwości generalizacyjne.
+
+Wnioski te wskazują, że przy wyborze modelu do klasyfikacji "dobrych" i "złych klientów", 
+klasyfikatory takie jak J48, MultilayerPerceptron i NaiveBayes wydają się być bardziej odpowiednie niż pozostałe.
+Aby uzyskać optymalną wydajność, warto eksplorować różne liczby foldów i powtórzeń dla klasyfikatorów J48 i MultilayerPerceptron,   
+podczas gdy NaiveBayes wykazuje dobrą zdolność dyskryminacyjną niezależnie od tych parametrów.	
